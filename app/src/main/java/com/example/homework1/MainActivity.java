@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements DayRecyclerView.I
 
     DayRecyclerView adapter;
     RecyclerView dayView;
+    DayFragment frag;
 
     public static Intent returnToMainActivity(Context context)
     {
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements DayRecyclerView.I
         dayView = findViewById(R.id.dayView);
 
         setupRecyclerView();
+
+        View dayfrag = findViewById(R.id.the_days_fragement);
+        frag = DayFragment.newInstance(null);
 
     }
     private void setupRecyclerView()
@@ -68,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements DayRecyclerView.I
 
     @Override
     public void onItemClick(CharSequence dayName, int dayImage) {
-        navigateToDayActivity(dayName, dayImage);
+        //navigateToDayActivity(dayName, dayImage);
+        //findViewById(R.layout.day_fragement).
+
     }
 }

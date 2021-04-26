@@ -29,7 +29,7 @@ public class DayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_day);
 
-        mTextView = (TextView) findViewById(R.id.the_days_text);
+        mTextView = (TextView) findViewById(R.id.the_fragments_text);
         mImageView = findViewById(R.id.the_days_image);
         mButton = findViewById(R.id.the_return_button);
         mButton.setOnClickListener(ReturnToMain);

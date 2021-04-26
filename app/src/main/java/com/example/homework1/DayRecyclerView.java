@@ -1,8 +1,6 @@
 package com.example.homework1;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +50,7 @@ public class DayRecyclerView extends RecyclerView.Adapter<DayRecyclerView.ViewHo
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            dayText = itemView.findViewById(R.id.the_days_text);
+            dayText = itemView.findViewById(R.id.the_fragments_text);
             dayImage= itemView.findViewById(R.id.the_days_image);
             dayButton = itemView.findViewById(R.id.the_days_button);
             dayButton.setOnClickListener(this);
@@ -61,6 +59,8 @@ public class DayRecyclerView extends RecyclerView.Adapter<DayRecyclerView.ViewHo
         public void bind(String s) {
             dayText.setText(s);
             s=s.toLowerCase();
+
+            //sauce: https://stackoverflow.com/questions/13351003/find-drawable-by-string
             Context context = dayImage.getContext();
             int id = context.getResources().getIdentifier(s, "drawable", context.getPackageName());
             dayImage.setImageResource(id);
